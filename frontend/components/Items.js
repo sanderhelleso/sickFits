@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Query } from 'react-apollo';
-import qql from 'graphql-tag';
+import gql from 'graphql-tag';
 import styled from 'styled-components';
 
 import Item from './Item';
 
-const ALL_ITEMS_QUERY = qql`
+const ALL_ITEMS_QUERY = gql`
     query ALL_ITEMS_QUERY {
         items {
             id
@@ -32,7 +32,7 @@ const ItemList = styled.div`
 class Items extends Component {
     render() {
         return (
-            <div>
+            <Center>
                 <p>Items!</p>  
                 <Query query={ALL_ITEMS_QUERY}>
                     {({ data, error, loading }) => {
@@ -47,9 +47,10 @@ class Items extends Component {
                         )
                     }}
                 </Query>
-            </div>
+            </Center>
         )
     }
 }
 
 export default Items;
+export { ALL_ITEMS_QUERY };

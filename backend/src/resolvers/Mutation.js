@@ -1,14 +1,17 @@
 const Mutations = {
     async createItem(parent, args, ctx, info) {
+        // TODO: Check if they are logged in
 
-        // TODO check if they are logged in
-
+		console.log(ctx.db.mutation);
         const item = await ctx.db.mutation.createItem({
-            data: {
-                ...args
-            }
-        }, info);
-
+				data: {
+					...args,
+				},
+			},
+			info
+        );
+    
+        console.log(item);
         return item;
     }
 };
