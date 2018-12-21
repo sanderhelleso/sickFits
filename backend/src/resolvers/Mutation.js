@@ -1,4 +1,6 @@
 const Mutations = {
+
+    // create a new item
     async createItem(parent, args, ctx, info) {
         // TODO: Check if they are logged in
 
@@ -15,6 +17,7 @@ const Mutations = {
         return item;
     },
 
+    // update an existing item
     updateItem(parent, args, ctx, info) {
 
         // take copy of the updates
@@ -33,7 +36,23 @@ const Mutations = {
             }, 
             info
         );
+    },
+
+    // delete an existing item
+    async deleteItem(parent, args, ctx, info) {
+        const where = { id: args.id };
+
+        // find item
+        const item = await ctx.db.query.item({ where }, `{ id title }`);
+
+        // check if user owns item or have permission
+        // todo
+
+        // delete the item
+        return ctx.db.mutation.deleteItem({ where }, info);
     }
+
+
 };
 
 module.exports = Mutations;
