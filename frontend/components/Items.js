@@ -4,6 +4,7 @@ import gql from 'graphql-tag';
 import styled from 'styled-components';
 
 import Item from './Item';
+import Pagination from './Pagination';
 
 const ALL_ITEMS_QUERY = gql`
     query ALL_ITEMS_QUERY {
@@ -11,6 +12,7 @@ const ALL_ITEMS_QUERY = gql`
             id
             title
             description
+            price
             image
             largeImage
         }
@@ -33,7 +35,7 @@ class Items extends Component {
     render() {
         return (
             <Center>
-                <p>Items!</p>  
+                <Pagination page={parseFloat(this.props.page)} />
                 <Query query={ALL_ITEMS_QUERY}>
                     {({ data, error, loading }) => {
                         if (loading) return <p>Loading...</p>
@@ -47,6 +49,7 @@ class Items extends Component {
                         )
                     }}
                 </Query>
+                <Pagination page={parseFloat(this.props.page)} />
             </Center>
         )
     }
