@@ -1,4 +1,4 @@
-((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\items.js"],{
+((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\index.js"],{
 
 /***/ "./components/DeleteItem.js":
 /*!**********************************!*\
@@ -202,11 +202,10 @@ function (_Component) {
     key: "render",
     value: function render() {
       var item = this.props.item;
-      console.log(item);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_ItemStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 20
         },
         __self: this
       }, item.image ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -214,13 +213,13 @@ function (_Component) {
         alt: item.title,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 21
         },
         __self: this
       }) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_Title__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 22
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -232,32 +231,32 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 23
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 27
         },
         __self: this
       }, item.title, " "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_PriceTag__WEBPACK_IMPORTED_MODULE_5__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 30
         },
         __self: this
       }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_6__["default"])(item.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 31
         },
         __self: this
       }, item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "buttonList",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 33
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -269,26 +268,26 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 34
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 38
         },
         __self: this
       }, "Edit")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 40
         },
         __self: this
       }, "Add To Cart"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DeleteItem__WEBPACK_IMPORTED_MODULE_7__["default"], {
         id: item.id,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 41
         },
         __self: this
       }, "Delete This Item")));
@@ -29832,49 +29831,15 @@ var Home = function Home(props) {
 
 /***/ }),
 
-/***/ "./pages/items.js":
-/*!************************!*\
-  !*** ./pages/items.js ***!
-  \************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./pages/index.js");
-
-/* harmony default export */ __webpack_exports__["default"] = (_index__WEBPACK_IMPORTED_MODULE_0__["default"]);
-    (function (Component, route) {
-      if(!Component) return
-      if (false) {}
-      module.hot.accept()
-      Component.__route = route
-
-      if (module.hot.status() === 'idle') return
-
-      var components = next.router.components
-      for (var r in components) {
-        if (!components.hasOwnProperty(r)) continue
-
-        if (components[r].Component.__route === route) {
-          next.router.update(r, Component)
-        }
-      }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/items")
-  
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
-
-/***/ }),
-
-/***/ 5:
+/***/ 6:
 /*!******************************!*\
-  !*** multi ./pages/items.js ***!
+  !*** multi ./pages/index.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__NEXT_REGISTER_PAGE('/items', function() {
-module.exports = __webpack_require__(/*! ./pages/items.js */"./pages/items.js");
+__NEXT_REGISTER_PAGE('/', function() {
+module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 
 return { page: module.exports.default }});
 
@@ -29891,5 +29856,5 @@ module.exports = dll_5d62d38be3592dca3a42;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]));;
-//# sourceMappingURL=items.js.map
+},[[6,"static/runtime/webpack.js"]]]));;
+//# sourceMappingURL=index.js.map
